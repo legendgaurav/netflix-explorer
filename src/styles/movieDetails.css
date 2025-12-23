@@ -1,0 +1,43 @@
+.details-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px
+}
+
+.details-poster img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.details-content h1 {
+  font-size: 24px;
+}
+
+.overview {
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.details-meta {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .details-page {
+    flex-direction: row;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .details-poster {
+    flex: 1;
+  }
+
+  .details-content {
+    flex: 2;
+  }
+}

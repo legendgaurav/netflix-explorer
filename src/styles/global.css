@@ -1,0 +1,129 @@
+.home-container {
+  padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #111;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links.desktop {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu a {
+  color: #fff;
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.close {
+  font-size: 24px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .nav-links.desktop {
+    display: flex;
+    gap: 25px;
+  }
+
+  .nav-links.desktop a {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+.movie-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+.filter-toggle {
+  position: relative;
+  display: inline-flex;
+  background: #222;
+  border-radius: 999px;
+  padding: 4px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.toggle-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #bbb;
+  padding: 8px 12px;
+  font-size: 14px;
+  z-index: 2;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-btn.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+.toggle-indicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background: #e50914; /* Netflix red */
+  border-radius: 999px;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-indicator.right {
+  transform: translateX(100%);
+}
+
+.toggle-indicator.left {
+  transform: translateX(0);
+}
+
+.toggle-btn:focus-visible {
+  outline: 2px solid #e50914;
+}
