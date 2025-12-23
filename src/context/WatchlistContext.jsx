@@ -1,4 +1,4 @@
-import { Children, createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import { watchlistReducer } from "../reducers/watchlistReducer";
 
 const WatchlistContext = createContext();

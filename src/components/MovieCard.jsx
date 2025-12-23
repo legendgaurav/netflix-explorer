@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/movieCard.css"
 import { memo, useCallback } from "react";
-import useWatchlist from "../hooks/useWatchlist";
 
 export default memo(function MovieCard({
   movie,

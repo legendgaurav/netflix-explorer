@@ -9,8 +9,8 @@ const Watchlist = lazy(() => import('./pages/Watchlist'));
 const Search = lazy(() => import('./pages/Search'));
 
 function App() {
-  const [title, setTitle] = useState('MovieExplorer');
-  const [links, setLinks] = useState([
+  const [title] = useState('MovieExplorer');
+  const [links] = useState([
     { name: 'Home', path: '/' },
     { name: 'Search', path: '/search' },
     { name: 'Watchlist', path: '/watchlist' }
